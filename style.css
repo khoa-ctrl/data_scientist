@@ -201,7 +201,7 @@ a {
   font-weight: 600;
 }
 
-/* HERO TYPOGRAPHY — ĐẨY LÊN GỌN GÀNG ĐỂ TRÁNH ĐÈ CHỮ */
+/* HERO TYPOGRAPHY */
 .h1 {
   left: 586px;
   top: 115px;
@@ -314,14 +314,14 @@ a {
   font-family: 'Fira Code', monospace;
 }
 
-/* BROWSER MOCKUP CONTAINER — NẰM AN TOÀN BÊN DƯỚI, KHÔNG ĐÈ CHỮ, ĐỘ RỘNG 960px */
+/* BROWSER MOCKUP CONTAINER — TRÁNH KHOANG ĐỎ PHÍA TRÊN, TẬN DỤNG KHOANG XANH PHÍA DƯỚI */
 .browser {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 250px;  
-  width: 960px; 
-  height: 385px; 
+  top: 275px;  /* Nằm an toàn bên dưới khoang đỏ, không đè chữ */
+  width: 980px; /* Độ rộng tối ưu cân đối */
+  height: 355px; /* Kéo dài xuống khoang xanh trống phía dưới */
   border-radius: 18px 18px 0 0;
   overflow: hidden;
   z-index: 100;
@@ -330,7 +330,7 @@ a {
 }
 
 .browser.minimized {
-  transform: translateX(-50%) translateY(340px);
+  transform: translateX(-50%) translateY(315px);
 }
 
 .browser.hidden-mock {
@@ -452,7 +452,7 @@ a {
   color: rgba(255,255,255,.75);
 }
 
-/* PAGE CONTENT — CHO PHÉP LĂN VÀ KÉO CHUỘT THẢ GA */
+/* PAGE CONTENT — LĂN VÀ KÉO CHUỘT THẢ GA VỚI THANH CUỘN RÕ RÀNG */
 .page {
   position: absolute;
   left: 0;
@@ -464,12 +464,12 @@ a {
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  pointer-events: auto; /* Đảm bảo nhận sự kiện kéo thả chuột */
+  pointer-events: auto;
 }
 
-/* Thanh cuộn rõ ràng, dễ nắm kéo */
+/* Thanh cuộn nổi bật, dễ nắm kéo */
 .page::-webkit-scrollbar {
-  width: 8px; 
+  width: 9px; 
 }
 
 .page::-webkit-scrollbar-track {
@@ -487,7 +487,7 @@ a {
 }
 
 .pagebody {
-  padding: 30px 40px 100px 40px;
+  padding: 30px 45px 120px 45px;
   color: #e2e8f0;
   font-size: 13px;
   line-height: 1.6;
