@@ -78,10 +78,10 @@ a {
 /* BADGE */
 .badge {
   left: 462px;
-  top: 80px;
+  top: 75px;
   width: 250px;
-  height: 36px;
-  border-radius: 18px;
+  height: 34px;
+  border-radius: 17px;
   z-index: 300;
   border: 1px solid rgba(255,255,255,.115);
   background: rgba(255,255,255,.03);
@@ -93,7 +93,7 @@ a {
 }
 
 .badge b {
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 400;
   color: rgba(255,255,255,.9);
   white-space: nowrap;
@@ -133,8 +133,8 @@ a {
   left: 200px;
   top: 10px;
   width: 772px;
-  height: 60px;
-  border-radius: 30px;
+  height: 56px;
+  border-radius: 28px;
   z-index: 400;
   background: rgba(15, 23, 42, 0.6);
   border: 1px solid rgba(255,255,255,.12);
@@ -153,7 +153,7 @@ a {
 }
 
 .wm .kick {
-  font-size: 8.5px;
+  font-size: 8px;
   font-weight: 700;
   letter-spacing: .15em;
   color: #38bdf8;
@@ -163,7 +163,7 @@ a {
 .wm .name {
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.2;
   letter-spacing: -.01em;
   color: #fff;
@@ -182,7 +182,7 @@ a {
 }
 
 .links a {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 500;
   color: rgba(255,255,255,.85);
   transition: color .2s;
@@ -194,23 +194,23 @@ a {
 }
 
 .nav .btn {
-  width: 110px;
-  height: 38px;
-  border-radius: 19px;
-  font-size: 13px;
+  width: 105px;
+  height: 36px;
+  border-radius: 18px;
+  font-size: 12.5px;
   font-weight: 600;
 }
 
-/* HERO TYPOGRAPHY */
+/* HERO TYPOGRAPHY — ĐẨY LÊN GỌN GÀNG ĐỂ TRÁNH ĐÈ CHỮ */
 .h1 {
   left: 586px;
-  top: 125px;
+  top: 115px;
   transform: translateX(-50%);
   white-space: nowrap;
   line-height: 1;
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 46px;
   letter-spacing: -.02em;
   color: #fff;
   text-shadow: 0 0 34px rgba(56,189,248,.3);
@@ -219,11 +219,11 @@ a {
 
 .sub-title-vn {
   left: 586px;
-  top: 182px;
+  top: 168px;
   transform: translateX(-50%);
   position: absolute;
   white-space: nowrap;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 600;
   color: #38bdf8;
   letter-spacing: .02em;
@@ -234,15 +234,15 @@ a {
   left: 586px;
   transform: translateX(-50%);
   white-space: nowrap;
-  line-height: 1.4;
-  font-size: 13px;
+  line-height: 1.3;
+  font-size: 12.5px;
   color: #94a3b8;
   z-index: 300;
   text-align: center;
 }
 
-#sub1 { top: 220px; }
-#sub2 { top: 242px; }
+#sub1 { top: 200px; }
+#sub2 { top: 220px; }
 
 /* 3D CAROUSEL RING */
 .showcase {
@@ -270,10 +270,10 @@ a {
   position: absolute;
   left: 586px;
   top: 480px;
-  width: 150px;
-  height: 220px;
-  margin: -110px 0 0 -75px;
-  border-radius: 16px;
+  width: 140px;
+  height: 200px;
+  margin: -100px 0 0 -70px;
+  border-radius: 14px;
   overflow: hidden;
   background: #090d16;
   border: 1px solid rgba(255,255,255,.15);
@@ -297,11 +297,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 14px 12px;
+  padding: 12px 10px;
 }
 
 .card .card-title {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,.8);
@@ -309,20 +309,20 @@ a {
 }
 
 .card .card-desc {
-  font-size: 9.5px;
+  font-size: 9px;
   color: #7dd3fc;
   font-family: 'Fira Code', monospace;
 }
 
-/* BROWSER MOCKUP CONTAINER — ĐỘ RỘNG VỪA VẶN 940px, NẰM CÂN ĐỐI BÊN DƯỚI */
+/* BROWSER MOCKUP CONTAINER — NẰM AN TOÀN BÊN DƯỚI, KHÔNG ĐÈ CHỮ, ĐỘ RỘNG 960px */
 .browser {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 310px;  
-  width: 940px; 
-  height: 330px; 
-  border-radius: 20px 20px 0 0;
+  top: 250px;  
+  width: 960px; 
+  height: 385px; 
+  border-radius: 18px 18px 0 0;
   overflow: hidden;
   z-index: 100;
   box-shadow: 0 -14px 50px rgba(0,0,0,.7);
@@ -330,7 +330,7 @@ a {
 }
 
 .browser.minimized {
-  transform: translateX(-50%) translateY(290px);
+  transform: translateX(-50%) translateY(340px);
 }
 
 .browser.hidden-mock {
@@ -339,8 +339,8 @@ a {
 }
 
 .browser.maximized {
-  top: 20px !important;
-  height: 590px !important;
+  top: 15px !important;
+  height: 625px !important;
   width: 1100px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
@@ -351,9 +351,9 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  top: 42px;
+  top: 40px;
   bottom: 0;
-  background: rgba(13,17,26,.96);
+  background: rgba(13,17,26,.97);
   z-index: 0;
 }
 
@@ -362,7 +362,7 @@ a {
   left: 0;
   top: 0;
   width: 100%;
-  height: 42px;
+  height: 40px;
   background: linear-gradient(180deg, rgba(20,24,48,.85), rgba(15,19,38,.95));
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -381,8 +381,8 @@ a {
 }
 
 .dots i {
-  width: 11px;
-  height: 11px;
+  width: 10.5px;
+  height: 10.5px;
   border-radius: 50%;
   display: inline-block;
   transition: filter .2s;
@@ -400,20 +400,20 @@ a {
 .nav-controls {
   display: flex;
   gap: 6px;
-  margin-left: 16px;
+  margin-left: 14px;
 }
 
 .nav-arrow {
   background: rgba(255,255,255,.08);
   border: 1px solid rgba(255,255,255,.1);
   color: #94a3b8;
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 11px;
   font-family: monospace;
   cursor: pointer;
   transition: all .2s;
@@ -429,9 +429,9 @@ a {
 .omni {
   margin-left: auto;
   margin-right: auto;
-  width: 420px;
-  height: 26px;
-  border-radius: 6px;
+  width: 380px;
+  height: 24px;
+  border-radius: 5px;
   background: rgba(9,13,26,.8);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
   display: flex;
@@ -441,32 +441,33 @@ a {
 }
 
 .omni svg {
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 10px;
   opacity: .7;
 }
 
 .omni span {
-  font-size: 10.5px;
+  font-size: 10px;
   font-family: 'Fira Code', monospace;
   color: rgba(255,255,255,.75);
 }
 
-/* PAGE CONTENT — LĂN CHUỘT TỰ DO & THANH CUỘN RÕ RÀNG */
+/* PAGE CONTENT — CHO PHÉP LĂN VÀ KÉO CHUỘT THẢ GA */
 .page {
   position: absolute;
   left: 0;
   right: 0;
-  top: 42px;
+  top: 40px;
   bottom: 0;
   background: #0d111a;
   color: #fff;
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  pointer-events: auto; /* Đảm bảo nhận sự kiện kéo thả chuột */
 }
 
-/* Thanh cuộn to rõ, dễ cầm kéo */
+/* Thanh cuộn rõ ràng, dễ nắm kéo */
 .page::-webkit-scrollbar {
   width: 8px; 
 }
@@ -488,18 +489,18 @@ a {
 .pagebody {
   padding: 30px 40px 100px 40px;
   color: #e2e8f0;
-  font-size: 13.5px;
+  font-size: 13px;
   line-height: 1.6;
 }
 
 .doc-section {
-  margin-bottom: 45px;
-  scroll-margin-top: 24px;
+  margin-bottom: 40px;
+  scroll-margin-top: 20px;
 }
 
 .doc-title {
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: #38bdf8;
   margin-bottom: 14px;
@@ -511,7 +512,7 @@ a {
 }
 
 .doc-title span {
-  font-size: 11px;
+  font-size: 10.5px;
   font-family: 'Fira Code', monospace;
   background: rgba(56,189,248,.15);
   color: #7dd3fc;
@@ -522,16 +523,16 @@ a {
 /* Custom Grid & Cards */
 .ds-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
 }
 
 .ds-card {
   background: rgba(255,255,255,.03);
   border: 1px solid rgba(255,255,255,.08);
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 10px;
+  padding: 14px;
   transition: transform .2s, border-color .2s;
 }
 
@@ -541,58 +542,58 @@ a {
 }
 
 .ds-card h4 {
-  font-size: 14px;
+  font-size: 13.5px;
   color: #f8fafc;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .ds-card p {
-  font-size: 12px;
+  font-size: 11.5px;
   color: #94a3b8;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .timeline-list {
   position: relative;
-  padding-left: 20px;
+  padding-left: 18px;
   border-left: 2px solid #1e293b;
-  margin: 16px 0;
+  margin: 14px 0;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -26px;
+  left: -24px;
   top: 4px;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: #38bdf8;
   box-shadow: 0 0 8px #38bdf8;
 }
 
 .timeline-year {
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
   color: #38bdf8;
   margin-bottom: 2px;
 }
 
 .timeline-content {
-  font-size: 13px;
+  font-size: 12.5px;
   color: #cbd5e1;
 }
 
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 14px;
-  font-size: 12.5px;
+  margin-top: 12px;
+  font-size: 12px;
   background: rgba(15,23,42,.6);
   border-radius: 8px;
   overflow: hidden;
@@ -618,31 +619,31 @@ a {
 .quiz-box {
   background: rgba(15,23,42,.9);
   border: 1px solid rgba(56,189,248,.3);
-  border-radius: 14px;
-  padding: 20px;
-  margin-top: 16px;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 14px;
 }
 
 .quiz-q {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
   color: #f1f5f9;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .quiz-opts {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
 }
 
 .quiz-opt {
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.1);
-  padding: 10px 14px;
-  border-radius: 8px;
+  padding: 10px 12px;
+  border-radius: 7px;
   cursor: pointer;
-  font-size: 12.5px;
+  font-size: 12px;
   transition: all .2s;
   color: #e2e8f0;
 }
@@ -653,11 +654,11 @@ a {
 }
 
 .quiz-res {
-  margin-top: 16px;
-  padding: 12px;
+  margin-top: 14px;
+  padding: 10px;
   background: rgba(16,185,129,.15);
   border: 1px solid #10b981;
-  border-radius: 8px;
+  border-radius: 7px;
   color: #6ee7b7;
   font-weight: 500;
   display: none;
@@ -667,22 +668,22 @@ a {
 .fb-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 14px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .fb-input, .fb-textarea {
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.1);
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 7px;
+  padding: 9px;
   color: #fff;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 11.5px;
 }
 
 .fb-textarea {
-  min-height: 70px;
+  min-height: 60px;
   resize: vertical;
 }
 
@@ -691,10 +692,10 @@ a {
   background: #0284c7;
   color: #fff;
   border: none;
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 11.5px;
   cursor: pointer;
   transition: background .2s;
 }
@@ -735,9 +736,9 @@ a {
     position: absolute;
     left: 0;
     right: 0;
-    top: 70px;
+    top: 65px;
     padding: 12px;
-    border-radius: 20px;
+    border-radius: 18px;
     border: 1px solid rgba(255,255,255,.10);
     background: rgba(11,15,22,.98);
     opacity: 0;
@@ -757,7 +758,7 @@ a {
   }
 
   .links a {
-    padding: 10px;
+    padding: 9px;
     border-radius: 8px;
   }
 
@@ -773,17 +774,17 @@ a {
   .canvas > * { position: static; }
   .stack { display: contents; }
 
-  .nav { position: relative; width: 100%; height: 58px; margin-top: 12px; left: auto; }
-  .badge { position: relative; margin-top: 16px; left: auto; }
+  .nav { position: relative; width: 100%; height: 56px; margin-top: 10px; left: auto; }
+  .badge { position: relative; margin-top: 14px; left: auto; }
   
-  .h1 { position: relative; left: auto; top: auto; transform: none; text-align: center; font-size: 32px; margin-top: 16px; }
-  .sub-title-vn { position: relative; left: auto; top: auto; transform: none; text-align: center; font-size: 17px; margin-top: 4px; }
-  .sub { position: relative; left: auto; top: auto; transform: none; text-align: center; margin-top: 8px; white-space: normal; }
+  .h1 { position: relative; left: auto; top: auto; transform: none; text-align: center; font-size: 30px; margin-top: 14px; }
+  .sub-title-vn { position: relative; left: auto; top: auto; transform: none; text-align: center; font-size: 16px; margin-top: 4px; }
+  .sub { position: relative; left: auto; top: auto; transform: none; text-align: center; margin-top: 6px; white-space: normal; }
 
-  .showcase { position: relative; width: 100%; height: 200px; overflow: hidden; margin-top: 20px; }
-  .ring { position: absolute; left: 50%; margin-left: -586px; top: -430px; width: 1172px; height: 657px; transform: scale(0.8); }
+  .showcase { position: relative; width: 100%; height: 180px; overflow: hidden; margin-top: 16px; }
+  .ring { position: absolute; left: 50%; margin-left: -586px; top: -430px; width: 1172px; height: 657px; transform: scale(0.75); }
 
-  .browser { position: relative; left: auto; top: auto; width: 100%; height: auto; min-height: 600px; margin-top: 16px; }
+  .browser { position: relative; left: auto; top: auto; width: 100%; height: auto; min-height: 550px; margin-top: 14px; }
   .page { position: relative; inset: 0; height: auto; }
   .omni { width: 50%; }
 }
