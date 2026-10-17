@@ -78,7 +78,7 @@ a {
 /* BADGE */
 .badge {
   left: 462px;
-  top: 90px;
+  top: 85px;
   width: 250px;
   height: 36px;
   border-radius: 18px;
@@ -128,7 +128,7 @@ a {
   box-shadow: 0 6px 20px rgba(20,180,225,.5);
 }
 
-/* NAV PILL — FIX ĐÈ CHỮ VÀ DÀN HÀNG CHUẨN */
+/* NAV PILL */
 .nav {
   left: 200px;
   top: 10px;
@@ -204,13 +204,13 @@ a {
 /* HERO TYPOGRAPHY */
 .h1 {
   left: 586px;
-  top: 135px;
+  top: 130px;
   transform: translateX(-50%);
   white-space: nowrap;
   line-height: 1;
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 56px;
+  font-size: 52px;
   letter-spacing: -.02em;
   color: #fff;
   text-shadow: 0 0 34px rgba(56,189,248,.3);
@@ -219,11 +219,11 @@ a {
 
 .sub-title-vn {
   left: 586px;
-  top: 200px;
+  top: 190px;
   transform: translateX(-50%);
   position: absolute;
   white-space: nowrap;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 600;
   color: #38bdf8;
   letter-spacing: .02em;
@@ -235,16 +235,16 @@ a {
   transform: translateX(-50%);
   white-space: nowrap;
   line-height: 1.4;
-  font-size: 13.5px;
+  font-size: 13px;
   color: #94a3b8;
   z-index: 300;
   text-align: center;
 }
 
-#sub1 { top: 242px; }
-#sub2 { top: 266px; }
+#sub1 { top: 230px; }
+#sub2 { top: 252px; }
 
-/* 3D CAROUSEL RING — ĐỔI THÀNH HÌNH ẢNH CHỤP CAO CẤP */
+/* 3D CAROUSEL RING */
 .showcase {
   position: absolute;
   left: 0;
@@ -270,9 +270,9 @@ a {
   position: absolute;
   left: 586px;
   top: 480px;
-  width: 160px;
-  height: 230px;
-  margin: -115px 0 0 -80px;
+  width: 150px;
+  height: 220px;
+  margin: -110px 0 0 -75px;
   border-radius: 16px;
   overflow: hidden;
   background: #090d16;
@@ -301,7 +301,7 @@ a {
 }
 
 .card .card-title {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,.8);
@@ -309,27 +309,27 @@ a {
 }
 
 .card .card-desc {
-  font-size: 10px;
+  font-size: 9.5px;
   color: #7dd3fc;
   font-family: 'Fira Code', monospace;
 }
 
-/* BROWSER MOCKUP CONTAINER */
+/* BROWSER MOCKUP CONTAINER — ĐÃ MỞ RỘNG RỘNG HƠN & CAO HƠN */
 .browser {
   position: absolute;
-  left: 165px;
-  top: 315px;
-  width: 842px;
-  height: calc(342px + var(--fill,0px));
+  left: 106px; /* Mở rộng sang hai bên */
+  top: 285px;  /* Dịch lên trên một chút để có nhiều không gian hiển thị */
+  width: 960px; /* Tăng chiều rộng khung */
+  height: calc(480px + var(--fill,0px)); /* Tăng chiều cao để không bị mất chữ bên dưới */
   border-radius: 20px 20px 0 0;
   overflow: hidden;
   z-index: 100;
-  box-shadow: 0 -14px 44px rgba(0,0,0,.6);
+  box-shadow: 0 -14px 50px rgba(0,0,0,.7);
   transition: transform .3s ease, height .3s ease, opacity .3s ease;
 }
 
 .browser.minimized {
-  transform: translateY(290px);
+  transform: translateY(430px);
 }
 
 .browser.hidden-mock {
@@ -339,7 +339,9 @@ a {
 
 .browser.maximized {
   top: 10px !important;
-  height: calc(640px + var(--fill,0px)) !important;
+  height: calc(660px + var(--fill,0px)) !important;
+  left: 106px !important;
+  width: 960px !important;
 }
 
 .browser::before {
@@ -349,7 +351,7 @@ a {
   right: 0;
   top: 42px;
   bottom: 0;
-  background: rgba(13,17,26,.95);
+  background: rgba(13,17,26,.96);
   z-index: 0;
 }
 
@@ -359,7 +361,7 @@ a {
   top: 0;
   width: 100%;
   height: 42px;
-  background: linear-gradient(180deg, rgba(20,24,48,.8), rgba(15,19,38,.9));
+  background: linear-gradient(180deg, rgba(20,24,48,.85), rgba(15,19,38,.95));
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: 10;
@@ -425,7 +427,7 @@ a {
 .omni {
   margin-left: auto;
   margin-right: auto;
-  width: 360px;
+  width: 400px;
   height: 26px;
   border-radius: 6px;
   background: rgba(9,13,26,.8);
@@ -448,7 +450,7 @@ a {
   color: rgba(255,255,255,.75);
 }
 
-/* PAGE CONTENT */
+/* PAGE CONTENT — HỖ TRỢ LĂN CHUỘT DÍNH THEO TỪNG MỤC (SCROLL SNAP) */
 .page {
   position: absolute;
   left: 0;
@@ -460,6 +462,7 @@ a {
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; /* Kích hoạt cuộn dính theo từng mục */
 }
 
 .page::-webkit-scrollbar {
@@ -476,28 +479,30 @@ a {
 }
 
 .pagebody {
-  padding: 24px 28px;
+  padding: 30px 40px; /* Tăng khoảng đệm rộng rãi */
   color: #e2e8f0;
-  font-size: 13px;
+  font-size: 13.5px;
   line-height: 1.6;
 }
 
 .doc-section {
-  margin-bottom: 40px;
-  scroll-margin-top: 20px;
+  margin-bottom: 50px;
+  scroll-margin-top: 24px;
+  scroll-snap-align: start; /* Mỗi khi lăn chuột, khung sẽ tự động neo khít đầu mục này */
+  min-height: 80vh; /* Giúp mỗi mục có độ dài hiển thị vừa vặn khi lăn qua */
 }
 
 .doc-title {
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   color: #38bdf8;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
   border-bottom: 1px solid rgba(56,189,248,.2);
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 }
 
 .doc-title span {
@@ -512,7 +517,7 @@ a {
 /* Custom Grid & Cards */
 .ds-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
   margin-top: 16px;
 }
@@ -521,7 +526,7 @@ a {
   background: rgba(255,255,255,.03);
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 12px;
-  padding: 16px;
+  padding: 18px;
   transition: transform .2s, border-color .2s;
 }
 
@@ -531,13 +536,13 @@ a {
 }
 
 .ds-card h4 {
-  font-size: 14px;
+  font-size: 14.5px;
   color: #f8fafc;
   margin-bottom: 6px;
 }
 
 .ds-card p {
-  font-size: 12px;
+  font-size: 12.5px;
   color: #94a3b8;
   line-height: 1.5;
 }
@@ -551,7 +556,7 @@ a {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .timeline-item::before {
@@ -574,7 +579,7 @@ a {
 }
 
 .timeline-content {
-  font-size: 13px;
+  font-size: 13.5px;
   color: #cbd5e1;
 }
 
@@ -582,14 +587,14 @@ a {
   width: 100%;
   border-collapse: collapse;
   margin-top: 14px;
-  font-size: 12px;
+  font-size: 13px;
   background: rgba(15,23,42,.6);
   border-radius: 8px;
   overflow: hidden;
 }
 
 .data-table th, .data-table td {
-  padding: 10px 14px;
+  padding: 12px 16px;
   text-align: left;
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
@@ -609,12 +614,12 @@ a {
   background: rgba(15,23,42,.9);
   border: 1px solid rgba(56,189,248,.3);
   border-radius: 14px;
-  padding: 20px;
+  padding: 22px;
   margin-top: 16px;
 }
 
 .quiz-q {
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 600;
   color: #f1f5f9;
   margin-bottom: 12px;
@@ -629,10 +634,10 @@ a {
 .quiz-opt {
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.1);
-  padding: 10px 14px;
+  padding: 11px 14px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 12.5px;
+  font-size: 13px;
   transition: all .2s;
   color: #e2e8f0;
 }
@@ -665,14 +670,14 @@ a {
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 8px;
-  padding: 10px;
+  padding: 11px;
   color: #fff;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 12.5px;
 }
 
 .fb-textarea {
-  min-height: 70px;
+  min-height: 75px;
   resize: vertical;
 }
 
@@ -681,10 +686,10 @@ a {
   background: #0284c7;
   color: #fff;
   border: none;
-  padding: 8px 18px;
+  padding: 9px 20px;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 12.5px;
   cursor: pointer;
   transition: background .2s;
 }
@@ -753,7 +758,6 @@ a {
 
   .nav .btn {
     width: 100%;
-    margin-top: 10px;
   }
 }
 
@@ -767,8 +771,8 @@ a {
   .nav { position: relative; width: 100%; height: 58px; margin-top: 12px; left: auto; }
   .badge { position: relative; margin-top: 16px; left: auto; }
   
-  .h1 { position: relative; left: auto; top: auto; transform: none; text-align: center; font-size: 34px; margin-top: 16px; }
-  .sub-title-vn { position: relative; left: auto; top: auto; transform: none; text-align: center; font-size: 18px; margin-top: 4px; }
+  .h1 { position: relative; left: auto; top: auto; transform: none; text-align: center; font-size: 32px; margin-top: 16px; }
+  .sub-title-vn { position: relative; left: auto; top: auto; transform: none; text-align: center; font-size: 17px; margin-top: 4px; }
   .sub { position: relative; left: auto; top: auto; transform: none; text-align: center; margin-top: 8px; white-space: normal; }
 
   .showcase { position: relative; width: 100%; height: 200px; overflow: hidden; margin-top: 20px; }
