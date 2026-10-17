@@ -14,39 +14,38 @@
   if (stB) stB.style.boxShadow = shadowB.join(',');
 })();
 
-/* 2. 3D CAROUSEL RING — DATA SCIENCE TECH CARDS */
-var SHOTS = [
-  { icon: '🤖', title: 'Machine Learning', desc: 'Thuật toán dự báo & Phân loại dữ liệu', tag: 'Scikit-Learn' },
-  { icon: '📊', title: 'Data Analytics', desc: 'Phân tích xu hướng & Trực quan hóa', tag: 'Tableau / PowerBI' },
-  { icon: '🐍', title: 'Python Code', desc: 'Ngôn ngữ cốt lõi cho Data Science', tag: 'Pandas & NumPy' },
-  { icon: '🗄️', title: 'SQL Database', desc: 'Truy vấn & Quản trị dữ liệu lớn', tag: 'PostgreSQL' },
-  { icon: '🧠', title: 'Deep Learning', desc: 'Mạng thần kinh nhân tạo & AI', tag: 'PyTorch / TensorFlow' },
-  { icon: '📈', title: 'Statistics', desc: 'Toán xác suất & Thống kê ứng dụng', tag: 'Math & Logic' },
-  { icon: '☁️', title: 'Big Data', desc: 'Xử lý dữ liệu quy mô lớn', tag: 'Spark / Hadoop' }
+/* 2. 3D CAROUSEL RING — BỔ SUNG LÊN 36 THẺ ẢNH CHỤP HD CHUYÊN NGÀNH */
+var PHOTO_SHOTS = [
+  { img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80', title: 'Data Dashboard', desc: 'Analytics & Trends' },
+  { img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80', title: 'Hardware & Chips', desc: 'Neural Computing' },
+  { img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80', title: 'Cyber Security', desc: 'Data Protection' },
+  { img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80', title: 'Python Coding', desc: 'Model Training' },
+  { img: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80', title: 'Big Data Mining', desc: 'Pattern Recognition' },
+  { img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80', title: 'AI Networks', desc: 'Deep Learning' },
+  { img: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80', title: 'UI / UX Analytics', desc: 'User Insights' },
+  { img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80', title: 'Server Farms', desc: 'Cloud Computing' },
+  { img: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80', title: 'Mathematics', desc: 'Applied Statistics' }
 ];
 
-function createTechCard(data) {
-  return '<div class="card-content">' +
-    '<div class="card-icon">' + data.icon + '</div>' +
-    '<div>' +
+function createPhotoCard(data) {
+  return '<img src="' + data.img + '" alt="' + data.title + '" loading="lazy">' +
+    '<div class="card-overlay">' +
       '<div class="card-title">' + data.title + '</div>' +
       '<div class="card-desc">' + data.desc + '</div>' +
-    '</div>' +
-    '<div class="card-tag">' + data.tag + '</div>' +
-  '</div>';
+    '</div>';
 }
 
 var ringEl = document.getElementById('carouselRing');
 var cards = [];
-var NUM_CARDS = 24;
-var RADIUS = 850;
+var NUM_CARDS = 36; // Tăng lên 36 ảnh giúp vòng xoay dày dặn và mượt mà hơn
+var RADIUS = 920;
 var STEP = 360 / NUM_CARDS;
 
 for (var c = 0; c < NUM_CARDS; c++) {
   var cardDiv = document.createElement('div');
   cardDiv.className = 'card';
-  var shotData = SHOTS[c % SHOTS.length];
-  cardDiv.innerHTML = createTechCard(shotData);
+  var shotData = PHOTO_SHOTS[c % PHOTO_SHOTS.length];
+  cardDiv.innerHTML = createPhotoCard(shotData);
   ringEl.appendChild(cardDiv);
   cards.push(cardDiv);
 }
@@ -61,12 +60,12 @@ function renderRing(t) {
   lastTime = t;
 
   if (!prefersReduced) {
-    phase -= 1.8 * dt;
+    phase -= 1.6 * dt;
   }
 
   for (var i = 0; i < NUM_CARDS; i++) {
     var a = ((i * STEP + phase) % 360 + 540) % 360 - 180;
-    if (Math.abs(a) > 45) {
+    if (Math.abs(a) > 55) {
       cards[i].style.visibility = 'hidden';
       continue;
     }
@@ -75,7 +74,7 @@ function renderRing(t) {
     var cosR = Math.cos(r);
     var sinR = Math.sin(r);
     cards[i].style.transform = 'translate3d(' + (RADIUS * sinR) + 'px, 0, ' + (RADIUS * (1 - cosR)) + 'px) rotateY(' + (-a) + 'deg)';
-    cards[i].style.filter = 'brightness(' + (0.85 + 0.45 * (1 / cosR - 1)) + ')';
+    cards[i].style.filter = 'brightness(' + (0.82 + 0.4 * (1 / cosR - 1)) + ')';
   }
   requestAnimationFrame(renderRing);
 }
@@ -88,30 +87,25 @@ var btnMinimize = document.getElementById('btnMinimize');
 var btnMaximize = document.getElementById('btnMaximize');
 var btnPrevSection = document.getElementById('btnPrevSection');
 var btnNextSection = document.getElementById('btnNextSection');
-var pageScroll = document.getElementById('pageScroll');
 
-// Nút Đỏ: Đóng/Ẩn Mockup
 if (btnClose) {
   btnClose.addEventListener('click', function() {
     browserMock.classList.toggle('hidden-mock');
   });
 }
 
-// Nút Vàng: Thu nhỏ/Mở lại
 if (btnMinimize) {
   btnMinimize.addEventListener('click', function() {
     browserMock.classList.toggle('minimized');
   });
 }
 
-// Nút Xanh: Phóng to Toàn màn hình
 if (btnMaximize) {
   btnMaximize.addEventListener('click', function() {
     browserMock.classList.toggle('maximized');
   });
 }
 
-// Chuyển nhanh giữa các Section (< >)
 var sections = ['overview', 'history', 'skills', 'market', 'roadmap', 'quiz'];
 var currentSectionIdx = 0;
 
