@@ -319,7 +319,7 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 275px;  /* Giữ vị trí an toàn ngay dưới tiêu đề */
+  top: 240px;  /* Giữ vị trí an toàn ngay dưới tiêu đề */
   width: 1020px; /* Mở rộng bề ngang thoáng đãng hơn */
   height: 700px; /* Kéo dài chiều cao sâu xuống tận đáy khoang xanh */
   border-radius: 18px 18px 0 0;
@@ -432,8 +432,9 @@ a {
 
 /* Omni Address Bar */
 .omni {
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: 380px;
   height: 24px;
   border-radius: 5px;
