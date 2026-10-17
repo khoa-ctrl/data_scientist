@@ -319,19 +319,19 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 235px;  /* Đặt gọn gàng bên dưới chữ, không đè lấn khoang đỏ */
-  width: 1000px; /* Rộng rãi */
-  height: 405px; /* Kéo dài xuống tận khoang xanh phía dưới */
+  top: 225px;  /* Giữ vị trí an toàn ngay dưới tiêu đề */
+  width: 1020px; /* Mở rộng bề ngang thoáng đãng hơn */
+  height: 435px; /* Kéo dài chiều cao sâu xuống tận đáy khoang xanh */
   border-radius: 18px 18px 0 0;
   overflow: hidden;
-  z-index: 600; /* Nằm trên cùng để các nút bấm < > và thanh cuộn nhận chuột tuyệt đối */
+  z-index: 600;
   box-shadow: 0 -14px 50px rgba(0,0,0,.8);
   transition: transform .3s ease, opacity .3s ease;
   pointer-events: auto;
 }
 
 .browser.minimized {
-  transform: translateX(-50%) translateY(355px);
+  transform: translateX(-50%) translateY(385px);
 }
 
 .browser.hidden-mock {
