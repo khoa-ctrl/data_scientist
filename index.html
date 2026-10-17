@@ -5,7 +5,6 @@
   <title>Data Scientist — Nhà Khoa Học Dữ Liệu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   
-  <!-- Font chữ Inter & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -45,7 +44,7 @@
               <a href="#market">Thị trường</a>
               <a href="#roadmap">Lộ trình</a>
             </div>
-            <a class="btn" href="#quiz"><span id="ctaLabel">Trắc nghiệm</span></a>
+            <a class="btn" href="#overview"><span id="ctaLabel">Bắt đầu</span></a>
           </div>
         </nav>
 
@@ -71,20 +70,17 @@
       <!-- BROWSER MOCKUP CONTAINER -->
       <div class="browser" id="browserMockup">
         <div class="bar">
-          <!-- macOS Controls -->
           <div class="dots">
             <i class="dot-red" id="btnClose" title="Đóng phần nội dung"></i>
             <i class="dot-yellow" id="btnMinimize" title="Thu nhỏ / Mở lại"></i>
             <i class="dot-green" id="btnMaximize" title="Phóng to / Thu nhỏ"></i>
           </div>
 
-          <!-- Nút điều hướng Chuyển tiếp / Phân đoạn -->
           <div class="nav-controls">
             <button type="button" class="nav-arrow" id="btnPrevSection" title="Phần trước">&lt;</button>
             <button type="button" class="nav-arrow" id="btnNextSection" title="Phần kế tiếp">&gt;</button>
           </div>
 
-          <!-- Thanh địa chỉ Omni -->
           <div class="omni">
             <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#fff" stroke-width="2.4"/><path d="M20 20l-3.8-3.8" stroke="#fff" stroke-width="2.4"/></svg>
             <span>datascience.edu.vn/career-guide/data-scientist</span>
@@ -106,7 +102,7 @@
               <div class="ds-grid">
                 <div class="ds-card">
                   <h4>💡 Khám phá bản thân</h4>
-                  <p>Đối chiếu sở thích cá nhân với yêu cầu thực tế của nghề Data Scientist qua bài trắc nghiệm tương tác.</p>
+                  <p>Đối chiếu sở thích cá nhân với yêu cầu thực tế của nghề Data Scientist.</p>
                 </div>
                 <div class="ds-card">
                   <h4>📊 Số liệu kiểm chứng</h4>
@@ -275,7 +271,7 @@
               <div class="ds-grid">
                 <div class="ds-card">
                   <h4 style="color:#38bdf8">Giai đoạn 1 (1–2 tháng)</h4>
-                  <p><b>Xây tư duy &amp; Công cụ cơ bản:</b> Tập đọc biểu đồ tin tức; làm quen Excel / Google Sheets nâng cao (Pivot Table, VLOOKUP, biểu đồ).</p>
+                  <p><b>Xây tư duy &amp; Công cụ cơ bản:</b> Tập đọc biểu đồ tin tức; làm quen Excel / Google Sheets nâng cao.</p>
                 </div>
                 <div class="ds-card">
                   <h4 style="color:#38bdf8">Giai đoạn 2 (2–3 tháng)</h4>
@@ -283,40 +279,21 @@
                 </div>
                 <div class="ds-card">
                   <h4 style="color:#38bdf8">Giai đoạn 3 (2 tháng)</h4>
-                  <p><b>Phân tích &amp; Làm sạch:</b> Sử dụng thư viện Pandas, NumPy để xử lý các tệp CSV thô, vẽ biểu đồ với Matplotlib/Seaborn.</p>
+                  <p><b>Phân tích &amp; Làm sạch:</b> Sử dụng thư viện Pandas, NumPy để xử lý các tệp CSV thô, vẽ biểu đồ.</p>
                 </div>
                 <div class="ds-card">
                   <h4 style="color:#38bdf8">Giai đoạn 4 (Thực hành)</h4>
-                  <p><b>Dự án thực chiến Kaggle:</b> Khai thác bộ dữ liệu mở (thể thao, kinh tế, thời tiết) trên Kaggle để xây dựng Portfolio cá nhân.</p>
+                  <p><b>Dự án thực chiến Kaggle:</b> Khai thác bộ dữ liệu mở trên Kaggle để xây dựng Portfolio cá nhân.</p>
                 </div>
               </div>
-            </section>
 
-            <!-- SECTION 6: QUIZ & FEEDBACK -->
-            <section class="doc-section" id="quiz">
-              <div class="doc-title">
-                6. Trắc nghiệm phù hợp &amp; Phản hồi <span>Mục tiêu 6</span>
-              </div>
-
-              <!-- Interactive Quiz -->
-              <div class="quiz-box">
-                <div class="quiz-q" id="quizQ">Câu 1: Khi gặp một biểu đồ số liệu phức tạp trên mạng, phản ứng đầu tiên của bạn là gì?</div>
-                <div class="quiz-opts" id="quizOpts">
-                  <div class="quiz-opt" onclick="answerQuiz(0)">A. Lướt qua nhanh vì cảm thấy khô khô khan.</div>
-                  <div class="quiz-opt" onclick="answerQuiz(1)">B. Xem lướt con số tổng quan để biết thông tin.</div>
-                  <div class="quiz-opt" onclick="answerQuiz(2)">C. Tò mò xem nguồn dữ liệu ở đâu và phân tích xem con số đó có chính xác không.</div>
-                </div>
-                <div class="quiz-res" id="quizRes"></div>
-              </div>
-
-              <!-- Citations -->
-              <h3 style="font-size:14px;color:#38bdf8;margin:24px 0 8px">Nguồn tài liệu tham khảo kiểm chứng:</h3>
+              <!-- Citations & Feedback -->
+              <h3 style="font-size:14px;color:#38bdf8;margin:28px 0 8px">Nguồn tài liệu tham khảo kiểm chứng:</h3>
               <ul style="padding-left:20px;font-size:12px;color:#94a3b8;line-height:1.8">
                 <li><b>U.S. Bureau of Labor Statistics (BLS):</b> Occupational Outlook Handbook - Data Scientists.</li>
-                <li><b>Harvard Business Review:</b> 'Data Scientist: The Sexiest Job of the 21st Century' (Davenport &amp; Patil).</li>
+                <li><b>Harvard Business Review:</b> 'Data Scientist: The Sexiest Job of the 21st Century'.</li>
               </ul>
 
-              <!-- Feedback Form -->
               <h3 style="font-size:14px;color:#38bdf8;margin:20px 0 8px">Gửi phản hồi đóng góp ý kiến:</h3>
               <form class="fb-form" onsubmit="submitFeedback(event)">
                 <input type="text" class="fb-input" placeholder="Họ và tên của bạn / Học sinh trường..." required>
