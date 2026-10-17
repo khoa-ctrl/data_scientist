@@ -133,7 +133,21 @@ if (btnNextSection) {
   });
 }
 
-/* 4. MOBILE MENU BURGER CONTROLLER */
+/* 4. CTA BUTTON & RESET MOCKUP BROWSER */
+var ctaButton = document.querySelector('.navmenu .btn');
+if (ctaButton) {
+  ctaButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Nếu khung nội dung đang bị ẩn (do bấm nút đỏ), hiển thị lại nó
+    if (browserMock.classList.contains('hidden-mock')) {
+      browserMock.classList.remove('hidden-mock');
+    }
+    // Đồng thời cuộn về phần đầu tiên (overview)
+    scrollToSection(0);
+  });
+}
+
+/* 5. MOBILE MENU BURGER CONTROLLER */
 var navEl = document.getElementById('mainNav');
 var burgerBtn = document.getElementById('burgerBtn');
 if (burgerBtn) {
@@ -143,7 +157,7 @@ if (burgerBtn) {
   });
 }
 
-/* 5. FEEDBACK FORM */
+/* 6. FEEDBACK FORM */
 function submitFeedback(e) {
   e.preventDefault();
   var fbSuccess = document.getElementById('fbSuccess');
