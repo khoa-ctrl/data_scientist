@@ -314,14 +314,14 @@ a {
   font-family: 'Fira Code', monospace;
 }
 
-/* BROWSER MOCKUP CONTAINER — MỞ RỘNG KHUNG BỰ HƠN PHÙ HỢP VỚI CỠ CHỮ LỚN */
+/* BROWSER MOCKUP CONTAINER */
 .browser {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 220px;  /* Nằm ngay dưới tiêu đề, an toàn tuyệt đối */
-  width: 1080px; /* Mở rộng bề ngang bề thế */
-  height: 460px; /* Tăng chiều cao để tận dụng tối đa khoang xanh */
+  top: 250px;  
+  width: 980px; 
+  height: 380px; 
   border-radius: 18px 18px 0 0;
   overflow: hidden;
   z-index: 600;
@@ -331,7 +331,7 @@ a {
 }
 
 .browser.minimized {
-  transform: translateX(-50%) translateY(410px);
+  transform: translateX(-50%) translateY(340px);
 }
 
 .browser.hidden-mock {
@@ -435,7 +435,7 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 440px;
+  width: 380px;
   height: 24px;
   border-radius: 5px;
   background: rgba(9,13,26,.8);
@@ -454,12 +454,12 @@ a {
 }
 
 .omni span {
-  font-size: 11px;
+  font-size: 10px;
   font-family: 'Fira Code', monospace;
   color: rgba(255,255,255,.75);
 }
 
-/* PAGE CONTENT — TĂNG CỠ CHỮ RÕ RÀNG, DỄ ĐỌC HƠN */
+/* PAGE CONTENT */
 .page {
   position: absolute;
   left: 0;
@@ -475,19 +475,18 @@ a {
   z-index: 10;
 }
 
-/* Thanh cuộn nổi bật, rõ ràng, dễ kéo */
 .page::-webkit-scrollbar {
-  width: 10px; 
+  width: 9px; 
 }
 
 .page::-webkit-scrollbar-track {
   background: #0d111a;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .page::-webkit-scrollbar-thumb {
   background: #38bdf8;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .page::-webkit-scrollbar-thumb:hover {
@@ -495,32 +494,32 @@ a {
 }
 
 .pagebody {
-  padding: 35px 50px 140px 50px;
+  padding: 30px 40px 100px 40px;
   color: #e2e8f0;
-  font-size: 14px; /* Tăng cỡ chữ nội dung chính */
-  line-height: 1.65;
+  font-size: 13.5px; /* Cỡ chữ vừa vặn, dễ đọc */
+  line-height: 1.6;
 }
 
 .doc-section {
-  margin-bottom: 45px;
-  scroll-margin-top: 24px;
+  margin-bottom: 40px;
+  scroll-margin-top: 20px;
 }
 
 .doc-title {
   font-family: 'Inter', sans-serif;
-  font-size: 18.5px; /* Tăng cỡ chữ tiêu đề mục */
+  font-size: 17.5px;
   font-weight: 700;
   color: #38bdf8;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 10px;
   border-bottom: 1px solid rgba(56,189,248,.2);
-  padding-bottom: 9px;
+  padding-bottom: 8px;
 }
 
 .doc-title span {
-  font-size: 11.5px;
+  font-size: 11px;
   font-family: 'Fira Code', monospace;
   background: rgba(56,189,248,.15);
   color: #7dd3fc;
@@ -528,19 +527,18 @@ a {
   border-radius: 12px;
 }
 
-/* Custom Grid & Cards */
 .ds-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
 }
 
 .ds-card {
   background: rgba(255,255,255,.03);
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 10px;
-  padding: 16px;
+  padding: 14px;
   transition: transform .2s, border-color .2s;
 }
 
@@ -550,27 +548,27 @@ a {
 }
 
 .ds-card h4 {
-  font-size: 14.5px; /* Tăng cỡ chữ tiêu đề card */
+  font-size: 13.5px;
   color: #f8fafc;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .ds-card p {
-  font-size: 12.5px; /* Tăng cỡ chữ mô tả card */
+  font-size: 11.5px;
   color: #94a3b8;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .timeline-list {
   position: relative;
   padding-left: 18px;
   border-left: 2px solid #1e293b;
-  margin: 16px 0;
+  margin: 14px 0;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .timeline-item::before {
@@ -586,29 +584,29 @@ a {
 }
 
 .timeline-year {
-  font-size: 12.5px;
+  font-size: 11.5px;
   font-weight: 700;
   color: #38bdf8;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .timeline-content {
-  font-size: 13.5px;
+  font-size: 12.5px;
   color: #cbd5e1;
 }
 
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 14px;
-  font-size: 13px; /* Tăng cỡ chữ bảng dữ liệu */
+  margin-top: 12px;
+  font-size: 12px;
   background: rgba(15,23,42,.6);
   border-radius: 8px;
   overflow: hidden;
 }
 
 .data-table th, .data-table td {
-  padding: 12px 16px;
+  padding: 10px 14px;
   text-align: left;
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
@@ -623,26 +621,25 @@ a {
   background: rgba(255,255,255,.02);
 }
 
-/* Feedback Form */
 .fb-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 14px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .fb-input, .fb-textarea {
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 7px;
-  padding: 10px;
+  padding: 9px;
   color: #fff;
   font-family: inherit;
-  font-size: 12.5px;
+  font-size: 11.5px;
 }
 
 .fb-textarea {
-  min-height: 65px;
+  min-height: 60px;
   resize: vertical;
 }
 
@@ -651,10 +648,10 @@ a {
   background: #0284c7;
   color: #fff;
   border: none;
-  padding: 9px 18px;
+  padding: 8px 16px;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 12.5px;
+  font-size: 11.5px;
   cursor: pointer;
   transition: background .2s;
 }
@@ -663,7 +660,6 @@ a {
   background: #0369a1;
 }
 
-/* RESPONSIVE DESIGN */
 @media (max-width: 1080px) {
   .nav { left: 5%; width: 90%; }
   .badge { left: auto; }
