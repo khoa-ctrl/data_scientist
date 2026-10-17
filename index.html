@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Data Scientist — Nhà Khoa Học Dữ Liệu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  
+  <!-- Font chữ Inter & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.add('intro');
+    setTimeout(function(){ document.documentElement.classList.remove('intro'); }, 4000);
+  </script>
+</head>
+
+<body>
+  <div class="stage">
+    <div class="bg"></div>
+    <div id="stA" class="stars"></div>
+    <div id="stB" class="stars"></div>
+
+    <div class="canvas">
+      <!-- FIXED STACK LAYER -->
+      <div class="stack">
+        <!-- NAVIGATION PILL -->
+        <nav class="nav" id="mainNav">
+          <div class="wm">
+            <span class="kick">CAREER GUIDE</span>
+            <span class="name" id="wmName">DATA SCIENTIST</span>
+          </div>
+
+          <button type="button" class="burger" id="burgerBtn" aria-label="Opens menu" aria-expanded="false" aria-controls="navmenu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <div class="navmenu" id="navmenu">
+            <div class="links" id="navLinks">
+              <a href="#overview">Tổng quan</a>
+              <a href="#history">Lịch sử</a>
+              <a href="#skills">Kỹ năng</a>
+              <a href="#market">Thị trường</a>
+              <a href="#roadmap">Lộ trình</a>
+            </div>
+            <a class="btn" href="#quiz"><span id="ctaLabel">Trắc nghiệm</span></a>
+          </div>
+        </nav>
+
+        <!-- BADGE -->
+        <div class="badge">
+          <b id="badgeTxt">Cẩm nang Hướng nghiệp 2026</b>
+        </div>
+
+        <!-- HERO HEADLINE -->
+        <h1 class="h1" id="h1a">DATA SCIENTIST</h1>
+        <div class="sub-title-vn" id="h1b">Nhà Khoa Học Dữ Liệu</div>
+
+        <!-- SUBTITLE DESCRIPTION -->
+        <div class="sub" id="sub1">Định hướng năng lực &amp; Đam mê ngành Dữ liệu dành cho học sinh</div>
+        <div class="sub" id="sub2">Thấu hiểu thông tin, khai phá tiềm năng và kiến tạo tương lai số.</div>
+      </div>
+
+      <!-- 3D CAROUSEL SHOWCASE -->
+      <div class="showcase">
+        <div class="ring" id="carouselRing"></div>
+      </div>
+
+      <!-- BROWSER MOCKUP CONTAINER -->
+      <div class="browser" id="browserMockup">
+        <div class="bar">
+          <!-- macOS Controls với chức năng tương tác -->
+          <div class="dots">
+            <i class="dot-red" id="btnClose" title="Đóng phần nội dung"></i>
+            <i class="dot-yellow" id="btnMinimize" title="Thu nhỏ / Mở lại"></i>
+            <i class="dot-green" id="btnMaximize" title="Phóng to / Thu nhỏ"></i>
+          </div>
+
+          <!-- Nút điều hướng Chuyển tiếp / Phân đoạn -->
+          <div class="nav-controls">
+            <button type="button" class="nav-arrow" id="btnPrevSection" title="Phần trước">&lt;</button>
+            <button type="button" class="nav-arrow" id="btnNextSection" title="Phần kế tiếp">&gt;</button>
+          </div>
+
+          <!-- Thanh địa chỉ Omni -->
+          <div class="omni">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#fff" stroke-width="2.4"/><path d="M20 20l-3.8-3.8" stroke="#fff" stroke-width="2.4"/></svg>
+            <span>datascience.edu.vn/career-guide/data-scientist</span>
+          </div>
+        </div>
+
+        <!-- PAGE CONTENT -->
+        <div class="page" id="pageScroll">
+          <div class="pagebody">
+
+            <!-- SECTION 1: OVERVIEW -->
+            <section class="doc-section" id="overview">
+              <div class="doc-title">
+                1. Giới thiệu &amp; Tổng quan ngành <span>Mục tiêu 1</span>
+              </div>
+              <p style="margin-bottom:12px">
+                <b>Data Scientist (Nhà khoa học dữ liệu)</b> là người khai phá các kho dữ liệu khổng lồ để tìm ra các mô hình, xu hướng và tri thức có giá trị, từ đó giúp các tổ chức đưa ra quyết định chiến lược chính xác. Đây là sự giao thoa giữa <b>Toán thống kê, Khoa học máy tính và Tư duy kinh doanh</b>.
+              </p>
+              <div class="ds-grid">
+                <div class="ds-card">
+                  <h4>💡 Khám phá bản thân</h4>
+                  <p>Đối chiếu sở thích cá nhân với yêu cầu thực tế của nghề Data Scientist qua bài trắc nghiệm tương tác.</p>
+                </div>
+                <div class="ds-card">
+                  <h4>📊 Số liệu kiểm chứng</h4>
+                  <p>Cập nhật số liệu tăng trưởng và mức lương chuẩn xác công bố bởi Cục Thống kê Lao động Mỹ (BLS).</p>
+                </div>
+                <div class="ds-card">
+                  <h4>🗺️ Lộ trình 4 bước</h4>
+                  <p>Xây dựng lộ trình tự học rõ ràng từng giai đoạn từ Excel, Python, SQL đến các dự án thực chiến Kaggle.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 2: WORKFLOW & HISTORY -->
+            <section class="doc-section" id="history">
+              <div class="doc-title">
+                2. Tìm hiểu chung &amp; Lịch sử phát triển <span>Mục tiêu 2</span>
+              </div>
+              
+              <h3 style="font-size:15px;color:#38bdf8;margin:16px 0 8px">2.1. Quy trình 5 bước công việc thực tế</h3>
+              <p>Mỗi ngày làm việc của một Data Scientist xoay quanh quy trình giải quyết bài toán cốt lõi:</p>
+              <div class="ds-grid">
+                <div class="ds-card">
+                  <h4>1. Bài toán kinh doanh</h4>
+                  <p>Xác định rõ vấn đề cần giải quyết (VD: Dự báo khách hàng rời bỏ dịch vụ, tối ưu vận chuyển).</p>
+                </div>
+                <div class="ds-card">
+                  <h4>2. Làm sạch dữ liệu (~80%)</h4>
+                  <p>Dành phần lớn thời gian thu thập, xử lý giá trị khuyết thiếu và chuẩn hóa dữ liệu thô.</p>
+                </div>
+                <div class="ds-card">
+                  <h4>3. Phân tích khám phá (EDA)</h4>
+                  <p>Dùng biểu đồ thống kê để tìm kiếm các mối tương quan ngầm giữa các biến số.</p>
+                </div>
+                <div class="ds-card">
+                  <h4>4. Mô hình Machine Learning</h4>
+                  <p>Huấn luyện các thuật toán học máy để phân loại hoặc dự báo xu hướng tương lai.</p>
+                </div>
+                <div class="ds-card" style="grid-column: span 2">
+                  <h4>5. Kể chuyện bằng dữ liệu (Storytelling)</h4>
+                  <p>Diễn giải kết quả kỹ thuật phức tạp thành đề xuất hành động thực tiễn cho ban quản lý.</p>
+                </div>
+              </div>
+
+              <h3 style="font-size:15px;color:#38bdf8;margin:24px 0 8px">2.2. Lịch sử phát triển &amp; Các cột mốc đột phá</h3>
+              <div class="timeline-list">
+                <div class="timeline-item">
+                  <div class="timeline-year">1962 — Khởi nguồn tư tưởng</div>
+                  <div class="timeline-content">John Tukey xuất bản bài báo 'The Future of Data Analysis', phác thảo ngành khoa học kết hợp thống kê toán và máy tính.</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">1974 — Danh xưng chính thức</div>
+                  <div class="timeline-content">Peter Naur xuất bản 'Concise Survey of Computer Methods', định nghĩa khoa học dữ liệu là khoa học xử lý quy trình dữ liệu.</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2001 — Tách thành ngành độc lập</div>
+                  <div class="timeline-content">William S. Cleveland đề xuất mở rộng thống kê học thành ngành riêng kết hợp tính toán trực tiếp trên dữ liệu lớn (Data Mining).</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2008 — Định danh chức danh</div>
+                  <div class="timeline-content">D.J. Patil (LinkedIn) và Jeff Hammerbacher (Facebook) chính thức đặt tên chức danh 'Data Scientist'.</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2012 — Bùng nổ thương mại hóa</div>
+                  <div class="timeline-content">Tạp chí Harvard Business Review gọi Data Scientist là 'Nghề quyến rũ nhất thế kỷ 21'. Cùng năm, Deep Learning bùng nổ với AlexNet.</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 3: SKILLS -->
+            <section class="doc-section" id="skills">
+              <div class="doc-title">
+                3. Yêu cầu cần có &amp; Bộ kỹ năng <span>Mục tiêu 3</span>
+              </div>
+              <p style="margin-bottom:12px">Học sinh có thể bắt đầu rèn luyện qua các nhóm kỹ năng thực tế sau:</p>
+              
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Nhóm kỹ năng</th>
+                    <th>Mô tả chi tiết yêu cầu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Tư duy phản biện (Critical Inquiry)</b></td>
+                    <td>Luôn đặt câu hỏi về nguồn gốc dữ liệu, phát hiện sai lệch (bias) và độ tin cậy thông tin.</td>
+                  </tr>
+                  <tr>
+                    <td><b>Lập trình &amp; Truy vấn</b></td>
+                    <td>Thành thạo Python (Pandas, NumPy, Scikit-learn) hoặc R; sử dụng SQL để truy vấn CSDL.</td>
+                  </tr>
+                  <tr>
+                    <td><b>Toán &amp; Thống kê ứng dụng</b></td>
+                    <td>Vững xác suất cơ bản, đại số tuyến tính (ma trận) và giải tích ứng dụng.</td>
+                  </tr>
+                  <tr>
+                    <td><b>Tiền xử lý &amp; Trực quan hóa</b></td>
+                    <td>Làm sạch dữ liệu thô; thiết kế biểu đồ trực quan qua Tableau, PowerBI, Matplotlib.</td>
+                  </tr>
+                  <tr>
+                    <td><b>Kể chuyện bằng dữ liệu</b></td>
+                    <td>Chuyển hóa kết quả phân tích phức tạp thành thông điệp kinh doanh rõ ràng.</td>
+                  </tr>
+                  <tr>
+                    <td><b>Am hiểu lĩnh vực (Domain Knowledge)</b></td>
+                    <td>Hiểu bài toán thực tế trong tài chính, y tế, thương mại điện tử, công nghiệp.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <!-- SECTION 4: MARKET DATA -->
+            <section class="doc-section" id="market">
+              <div class="doc-title">
+                4. Thị trường việc làm &amp; Thu nhập <span>Mục tiêu 4</span>
+              </div>
+              <p>Theo báo cáo mới nhất từ <b>Cục Thống kê Lao động Mỹ (U.S. Bureau of Labor Statistics - BLS)</b>:</p>
+              
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Nhóm ngành / Vị trí chuyên môn</th>
+                    <th>Dự báo tăng trưởng (2023–2033)</th>
+                    <th>Mức lương trung bình năm (USD)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Nhà khoa học dữ liệu (Data Scientist)</b></td>
+                    <td><span style="color:#10b981;font-weight:700">+36%</span></td>
+                    <td><b>$108,020</b></td>
+                  </tr>
+                  <tr>
+                    <td><b>Kỹ sư dữ liệu (Data Engineer)</b></td>
+                    <td><span style="color:#10b981;font-weight:700">+33%</span></td>
+                    <td><b>$115,120</b></td>
+                  </tr>
+                  <tr>
+                    <td><b>Nhà phân tích dữ liệu (Data Analyst)</b></td>
+                    <td><span style="color:#10b981;font-weight:700">+23%</span></td>
+                    <td><b>$95,000</b></td>
+                  </tr>
+                  <tr>
+                    <td><i>Mức trung bình tất cả các ngành</i></td>
+                    <td>+4%</td>
+                    <td>$48,060</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <!-- SECTION 5: ROADMAP -->
+            <section class="doc-section" id="roadmap">
+              <div class="doc-title">
+                5. Hướng đi &amp; Lộ trình học tập <span>Mục tiêu 5</span>
+              </div>
+
+              <h3 style="font-size:15px;color:#38bdf8;margin:12px 0">5.1. Bạn có phù hợp với nghề Data Scientist?</h3>
+              <ul style="padding-left:20px;margin-bottom:16px;color:#cbd5e1">
+                <li style="margin-bottom:6px">Tò mò, luôn muốn tìm hiểu bản chất và đặt câu hỏi "Tại sao?" trước các hiện tượng.</li>
+                <li style="margin-bottom:6px">Kiên nhẫn khi đối mặt với dữ liệu phức tạp hoặc các lỗi lập trình logic.</li>
+                <li>Thích kết hợp tư duy toán học với các ứng dụng thực tế trong đời sống.</li>
+              </ul>
+
+              <h3 style="font-size:15px;color:#38bdf8;margin:16px 0 8px">5.2. Lộ trình tự học 4 giai đoạn dành cho học sinh</h3>
+              <div class="ds-grid">
+                <div class="ds-card">
+                  <h4 style="color:#38bdf8">Giai đoạn 1 (1–2 tháng)</h4>
+                  <p><b>Xây tư duy &amp; Công cụ cơ bản:</b> Tập đọc biểu đồ tin tức; làm quen Excel / Google Sheets nâng cao (Pivot Table, VLOOKUP, biểu đồ).</p>
+                </div>
+                <div class="ds-card">
+                  <h4 style="color:#38bdf8">Giai đoạn 2 (2–3 tháng)</h4>
+                  <p><b>Lập trình &amp; Truy vấn:</b> Học Python cơ bản (biến, vòng lặp, hàm) và các câu lệnh truy vấn SQL đơn giản.</p>
+                </div>
+                <div class="ds-card">
+                  <h4 style="color:#38bdf8">Giai đoạn 3 (2 tháng)</h4>
+                  <p><b>Phân tích &amp; Làm sạch:</b> Sử dụng thư viện Pandas, NumPy để xử lý các tệp CSV thô, vẽ biểu đồ với Matplotlib/Seaborn.</p>
+                </div>
+                <div class="ds-card">
+                  <h4 style="color:#38bdf8">Giai đoạn 4 (Thực hành)</h4>
+                  <p><b>Dự án thực chiến Kaggle:</b> Khai thác bộ dữ liệu mở (thể thao, kinh tế, thời tiết) trên Kaggle để xây dựng Portfolio cá nhân.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 6: QUIZ & FEEDBACK -->
+            <section class="doc-section" id="quiz">
+              <div class="doc-title">
+                6. Trắc nghiệm phù hợp &amp; Phản hồi <span>Mục tiêu 6</span>
+              </div>
+
+              <!-- Interactive Quiz -->
+              <div class="quiz-box">
+                <div class="quiz-q" id="quizQ">Câu 1: Khi gặp một biểu đồ số liệu phức tạp trên mạng, phản ứng đầu tiên của bạn là gì?</div>
+                <div class="quiz-opts" id="quizOpts">
+                  <div class="quiz-opt" onclick="answerQuiz(0)">A. Lướt qua nhanh vì cảm thấy khô khô khan.</div>
+                  <div class="quiz-opt" onclick="answerQuiz(1)">B. Xem lướt con số tổng quan để biết thông tin.</div>
+                  <div class="quiz-opt" onclick="answerQuiz(2)">C. Tò mò xem nguồn dữ liệu ở đâu và phân tích xem con số đó có chính xác không.</div>
+                </div>
+                <div class="quiz-res" id="quizRes"></div>
+              </div>
+
+              <!-- Citations -->
+              <h3 style="font-size:14px;color:#38bdf8;margin:24px 0 8px">Nguồn tài liệu tham khảo kiểm chứng:</h3>
+              <ul style="padding-left:20px;font-size:12px;color:#94a3b8;line-height:1.8">
+                <li><b>U.S. Bureau of Labor Statistics (BLS):</b> Occupational Outlook Handbook - Data Scientists.</li>
+                <li><b>Harvard Business Review:</b> 'Data Scientist: The Sexiest Job of the 21st Century' (Davenport &amp; Patil).</li>
+              </ul>
+
+              <!-- Feedback Form -->
+              <h3 style="font-size:14px;color:#38bdf8;margin:20px 0 8px">Gửi phản hồi đóng góp ý kiến:</h3>
+              <form class="fb-form" onsubmit="submitFeedback(event)">
+                <input type="text" class="fb-input" placeholder="Họ và tên của bạn / Học sinh trường..." required>
+                <textarea class="fb-textarea" placeholder="Nhận xét hoặc câu hỏi của bạn về ngành Data Science..." required></textarea>
+                <button type="submit" class="fb-btn">Gửi phản hồi</button>
+              </form>
+              <div id="fbSuccess" style="display:none;color:#10b981;font-size:12px;margin-top:8px">Cảm ơn bạn! Phản hồi đã được ghi nhận thành công.</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
