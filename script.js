@@ -14,7 +14,7 @@
   if (stB) stB.style.boxShadow = shadowB.join(',');
 })();
 
-/* 2. 3D CAROUSEL RING — BỔ SUNG LÊN 36 THẺ ẢNH CHỤP HD CHUYÊN NGÀNH */
+/* 2. 3D CAROUSEL RING */
 var PHOTO_SHOTS = [
   { img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80', title: 'Data Dashboard', desc: 'Analytics & Trends' },
   { img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80', title: 'Hardware & Chips', desc: 'Neural Computing' },
@@ -37,7 +37,7 @@ function createPhotoCard(data) {
 
 var ringEl = document.getElementById('carouselRing');
 var cards = [];
-var NUM_CARDS = 36; // Tăng lên 36 ảnh giúp vòng xoay dày dặn và mượt mà hơn
+var NUM_CARDS = 36;
 var RADIUS = 920;
 var STEP = 360 / NUM_CARDS;
 
@@ -80,7 +80,7 @@ function renderRing(t) {
 }
 requestAnimationFrame(renderRing);
 
-/* 3. MOCKUP BROWSER CONTROLS (Nút macOS & Chuyển Trang) */
+/* 3. MOCKUP BROWSER CONTROLS (< > & macOS buttons) */
 var browserMock = document.getElementById('browserMockup');
 var btnClose = document.getElementById('btnClose');
 var btnMinimize = document.getElementById('btnMinimize');
@@ -106,7 +106,7 @@ if (btnMaximize) {
   });
 }
 
-var sections = ['overview', 'history', 'skills', 'market', 'roadmap', 'quiz'];
+var sections = ['overview', 'history', 'skills', 'market', 'roadmap'];
 var currentSectionIdx = 0;
 
 function scrollToSection(index) {
@@ -120,13 +120,15 @@ function scrollToSection(index) {
 }
 
 if (btnPrevSection) {
-  btnPrevSection.addEventListener('click', function() {
+  btnPrevSection.addEventListener('click', function(e) {
+    e.stopPropagation();
     scrollToSection(currentSectionIdx - 1);
   });
 }
 
 if (btnNextSection) {
-  btnNextSection.addEventListener('click', function() {
+  btnNextSection.addEventListener('click', function(e) {
+    e.stopPropagation();
     scrollToSection(currentSectionIdx + 1);
   });
 }
@@ -141,84 +143,7 @@ if (burgerBtn) {
   });
 }
 
-/* 5. INTERACTIVE QUIZ & FEEDBACK FORM */
-var quizQuestions = [
-  {
-    q: "Câu 1: Khi gặp một biểu đồ số liệu phức tạp trên tin tức, phản ứng đầu tiên của bạn là gì?",
-    opts: [
-      "Lướt qua nhanh vì cảm thấy khô khô khan.",
-      "Xem lướt con số tổng quan để biết thông tin.",
-      "Tò mò xem nguồn dữ liệu ở đâu và phân tích xem con số đó có chính xác không."
-    ],
-    score: [1, 2, 3]
-  },
-  {
-    q: "Câu 2: Bạn thích làm việc với dạng bài toán nào nhất?",
-    opts: [
-      "Các bài toán viết văn, thể hiện cảm xúc cá nhân.",
-      "Bài toán tính toán nhanh có công thức sẵn.",
-      "Bài toán logic có nhiều biến số, đòi hỏi suy luận và tìm bản chất nguyên nhân."
-    ],
-    score: [1, 2, 3]
-  },
-  {
-    q: "Câu 3: Mức độ kiên nhẫn của bạn khi gặp lỗi máy tính hoặc logic là bao nhiêu?",
-    opts: [
-      "Bỏ cuộc ngay lập tức để làm việc khác.",
-      "Thử lại 1-2 lần rồi nhờ người khác.",
-      "Kiên trì tìm kiếm Google, đọc tài liệu để tự sửa bằng được."
-    ],
-    score: [1, 2, 3]
-  }
-];
-
-var currentQIdx = 0;
-var totalQuizScore = 0;
-
-function renderQuiz() {
-  var qObj = quizQuestions[currentQIdx];
-  var qEl = document.getElementById('quizQ');
-  var optsEl = document.getElementById('quizOpts');
-  if (!qEl || !optsEl) return;
-
-  qEl.textContent = qObj.q;
-  optsEl.innerHTML = '';
-  qObj.opts.forEach(function(optText, idx) {
-    var optDiv = document.createElement('div');
-    optDiv.className = 'quiz-opt';
-    optDiv.textContent = optText;
-    optDiv.onclick = function() { answerQuiz(idx); };
-    optsEl.appendChild(optDiv);
-  });
-}
-
-function answerQuiz(optIdx) {
-  var qObj = quizQuestions[currentQIdx];
-  totalQuizScore += qObj.score[optIdx];
-  currentQIdx++;
-
-  if (currentQIdx < quizQuestions.length) {
-    renderQuiz();
-  } else {
-    var quizBox = document.getElementById('quizOpts');
-    var qEl = document.getElementById('quizQ');
-    var resEl = document.getElementById('quizRes');
-    if (qEl) qEl.style.display = 'none';
-    if (quizBox) quizBox.style.display = 'none';
-    if (resEl) {
-      resEl.style.display = 'block';
-      if (totalQuizScore >= 8) {
-        resEl.innerHTML = '🎯 <b>Đánh giá: Rất Phù Hợp!</b> Bạn có tư duy phản biện cao, sự tò mò tự nhiên và tính kiên trì — những phẩm chất vàng của một Data Scientist tương lai.';
-      } else if (totalQuizScore >= 5) {
-        resEl.innerHTML = '✨ <b>Đánh giá: Khá Phù Hợp!</b> Bạn có nền tảng tiềm năng. Hãy rèn luyện thêm tư duy logic và làm quen với Python/SQL nhé.';
-      } else {
-        resEl.innerHTML = '📚 <b>Đánh giá: Hãy Thử Khám Phá!</b> Ngành dữ liệu rất rộng lớn. Bạn có thể bắt đầu từ việc học Excel và vẽ biểu đồ trực quan trước.';
-      }
-    }
-  }
-}
-renderQuiz();
-
+/* 5. FEEDBACK FORM */
 function submitFeedback(e) {
   e.preventDefault();
   var fbSuccess = document.getElementById('fbSuccess');
