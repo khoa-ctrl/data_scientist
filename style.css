@@ -321,7 +321,7 @@ a {
   transform: translateX(-50%);
   top: 225px;  /* Giữ vị trí an toàn ngay dưới tiêu đề */
   width: 1020px; /* Mở rộng bề ngang thoáng đãng hơn */
-  height: 435px; /* Kéo dài chiều cao sâu xuống tận đáy khoang xanh */
+  height: 650px; /* Kéo dài chiều cao sâu xuống tận đáy khoang xanh */
   border-radius: 18px 18px 0 0;
   overflow: hidden;
   z-index: 600;
