@@ -22,7 +22,7 @@ a {
   color: inherit;
 }
 
-/* Core Stage & Canvas Scaling System */
+/* Stage & Canvas System */
 .stage {
   position: fixed;
   inset: 0;
@@ -101,8 +101,9 @@ a {
 
 /* GLOW BUTTON (.btn) */
 .btn {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -110,6 +111,8 @@ a {
   background: linear-gradient(to top, #14a8c6 0%, #038aa8 50%, #0a2a37 100%);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 0 10px rgba(60,190,235,.2);
   transition: transform .25s, box-shadow .25s, filter .25s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btn span {
@@ -125,33 +128,32 @@ a {
   box-shadow: 0 6px 20px rgba(20,180,225,.5);
 }
 
-/* NAV PILL */
+/* NAV PILL — FIX ĐÈ CHỮ VÀ DÀN HÀNG CHUẨN */
 .nav {
-  left: 247px;
-  top: 3px;
-  width: 678px;
-  height: 64px;
-  border-radius: 32px;
+  left: 200px;
+  top: 10px;
+  width: 772px;
+  height: 60px;
+  border-radius: 30px;
   z-index: 400;
-  background: rgba(255,255,255,.015);
-  border: 1px solid rgba(255,255,255,.105);
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255,255,255,.12);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .wm {
-  position: absolute;
-  left: 28px;
-  top: 14px;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .wm .kick {
-  font-size: 9px;
+  font-size: 8.5px;
   font-weight: 700;
   letter-spacing: .15em;
   color: #38bdf8;
@@ -161,27 +163,30 @@ a {
 .wm .name {
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: -.01em;
   color: #fff;
 }
 
-.links {
-  position: absolute;
-  left: 210px;
-  top: 0;
-  height: 62px;
+.navmenu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 28px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
 }
 
 .links a {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 13.5px;
+  font-weight: 500;
   color: rgba(255,255,255,.85);
-  transition: opacity .25s, color .25s;
+  transition: color .2s;
+  white-space: nowrap;
 }
 
 .links a:hover {
@@ -189,26 +194,23 @@ a {
 }
 
 .nav .btn {
-  position: absolute;
-  right: 18px;
-  top: 12px;
-  width: 115px;
-  height: 40px;
-  border-radius: 20px;
+  width: 110px;
+  height: 38px;
+  border-radius: 19px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* HERO TYPOGRAPHY */
 .h1 {
   left: 586px;
-  top: 140px;
+  top: 135px;
   transform: translateX(-50%);
   white-space: nowrap;
   line-height: 1;
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 58px;
+  font-size: 56px;
   letter-spacing: -.02em;
   color: #fff;
   text-shadow: 0 0 34px rgba(56,189,248,.3);
@@ -217,11 +219,11 @@ a {
 
 .sub-title-vn {
   left: 586px;
-  top: 205px;
+  top: 200px;
   transform: translateX(-50%);
   position: absolute;
   white-space: nowrap;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
   color: #38bdf8;
   letter-spacing: .02em;
@@ -239,10 +241,10 @@ a {
   text-align: center;
 }
 
-#sub1 { top: 248px; }
-#sub2 { top: 272px; }
+#sub1 { top: 242px; }
+#sub2 { top: 266px; }
 
-/* 3D CAROUSEL RING */
+/* 3D CAROUSEL RING — ĐỔI THÀNH HÌNH ẢNH CHỤP CAO CẤP */
 .showcase {
   position: absolute;
   left: 0;
@@ -258,8 +260,8 @@ a {
   width: 1172px;
   height: 657px;
   z-index: 5;
-  perspective: 891px;
-  perspective-origin: 586px 918px;
+  perspective: 900px;
+  perspective-origin: 586px 820px;
   transform-style: preserve-3d;
   pointer-events: none;
 }
@@ -267,59 +269,49 @@ a {
 .card {
   position: absolute;
   left: 586px;
-  top: 570px;
-  width: 140px;
-  height: 220px;
-  margin: -110px 0 0 -70px;
-  border-radius: 14px;
+  top: 480px;
+  width: 160px;
+  height: 230px;
+  margin: -115px 0 0 -80px;
+  border-radius: 16px;
   overflow: hidden;
   background: #090d16;
-  border: 1px solid rgba(56,189,248,.2);
-  box-shadow: 0 16px 32px rgba(0,0,0,.7);
+  border: 1px solid rgba(255,255,255,.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,.8);
   backface-visibility: hidden;
   will-change: transform;
 }
 
-.card .card-content {
+.card img {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 14px 10px;
-  background: linear-gradient(180deg, rgba(15,23,42,.8) 0%, rgba(3,7,18,.95) 100%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card .card-icon {
-  font-size: 28px;
-  text-align: center;
-  margin-top: 10px;
+.card .card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(2,6,23,.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px 12px;
 }
 
 .card .card-title {
-  font-size: 12px;
-  font-weight: 700;
-  color: #38bdf8;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .05em;
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.8);
+  margin-bottom: 2px;
 }
 
 .card .card-desc {
-  font-size: 9.5px;
-  color: #94a3b8;
-  text-align: center;
-  line-height: 1.3;
-}
-
-.card .card-tag {
-  font-family: 'Fira Code', monospace;
-  font-size: 9px;
-  background: rgba(56,189,248,.15);
+  font-size: 10px;
   color: #7dd3fc;
-  padding: 3px 6px;
-  border-radius: 4px;
-  text-align: center;
+  font-family: 'Fira Code', monospace;
 }
 
 /* BROWSER MOCKUP CONTAINER */
@@ -703,8 +695,8 @@ a {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1080px) {
-  .nav { left: 286px; width: 620px; }
-  .badge { left: 448px; }
+  .nav { left: 5%; width: 90%; }
+  .badge { left: auto; }
 
   .burger {
     display: grid;
@@ -733,7 +725,7 @@ a {
     position: absolute;
     left: 0;
     right: 0;
-    top: 74px;
+    top: 70px;
     padding: 12px;
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,.10);
@@ -749,10 +741,8 @@ a {
   }
 
   .links {
-    position: static;
     flex-direction: column;
     align-items: stretch;
-    height: auto;
     gap: 4px;
   }
 
@@ -762,7 +752,6 @@ a {
   }
 
   .nav .btn {
-    position: static;
     width: 100%;
     margin-top: 10px;
   }
@@ -775,7 +764,7 @@ a {
   .canvas > * { position: static; }
   .stack { display: contents; }
 
-  .nav { position: relative; width: 100%; height: 58px; margin-top: 12px; }
+  .nav { position: relative; width: 100%; height: 58px; margin-top: 12px; left: auto; }
   .badge { position: relative; margin-top: 16px; left: auto; }
   
   .h1 { position: relative; left: auto; top: auto; transform: none; text-align: center; font-size: 34px; margin-top: 16px; }
