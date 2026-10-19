@@ -157,10 +157,27 @@ if (burgerBtn) {
   });
 }
 
-/* 6. FEEDBACK FORM */
+/*6. Feedback & agent*/
 function submitFeedback(e) {
   e.preventDefault();
-  var fbSuccess = document.getElementById('fbSuccess');
-  if (fbSuccess) fbSuccess.style.display = 'block';
-  e.target.reset();
+  
+  var formData = {
+    name: e.target.querySelector('input[type="text"]').value,
+    feedback: e.target.querySelector('textarea').value
+  };
+
+  var WEB_APP_URL = "https://script.google.com/macros/s/AKfycby9TKmEzC--_DrXOBT_bJ-N1Pwq7uY26GYqmaM508mpsJl4O-IJCji2IAKfFA25Aciw9g/exec";
+
+  fetch(WEB_APP_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  }).then(function() {
+    var fbSuccess = document.getElementById('fbSuccess');
+    if (fbSuccess) fbSuccess.style.display = 'block';
+    e.target.reset();
+  }).catch(function(error) {
+    console.error('Lỗi:', error);
+  });
 }
