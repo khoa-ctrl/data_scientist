@@ -138,11 +138,9 @@ var ctaButton = document.querySelector('.navmenu .btn');
 if (ctaButton) {
   ctaButton.addEventListener('click', function(e) {
     e.preventDefault();
-    // Nếu khung nội dung đang bị ẩn (do bấm nút đỏ), hiển thị lại nó
     if (browserMock.classList.contains('hidden-mock')) {
       browserMock.classList.remove('hidden-mock');
     }
-    // Đồng thời cuộn về phần đầu tiên (overview)
     scrollToSection(0);
   });
 }
@@ -157,7 +155,7 @@ if (burgerBtn) {
   });
 }
 
-/*6. Feedback & agent*/
+/* 6. Feedback Handler */
 function submitFeedback(e) {
   e.preventDefault();
   
