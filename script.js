@@ -28,7 +28,7 @@ var PHOTO_SHOTS = [
 ];
 
 function createPhotoCard(data) {
-  return '<img src="' + data.img + '" alt="' + data.title + '" loading="lazy">' +
+  return '<img src="' + data.img + '" alt="' + data.title + '" loading="lazy" onerror="this.style.display=\'none\'">' +
     '<div class="card-overlay">' +
       '<div class="card-title">' + data.title + '</div>' +
       '<div class="card-desc">' + data.desc + '</div>' +
